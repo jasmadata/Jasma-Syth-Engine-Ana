@@ -29,11 +29,6 @@ Jasma Syth Engine (JSE) is a powerful, enterprise-grade synthetic data generatio
 
 ## 🛠 Installation
 
-### Basic Installation
-```bash
-pip install jasma-syth
-```
-
 
 ## 🎯 Quick Start
 

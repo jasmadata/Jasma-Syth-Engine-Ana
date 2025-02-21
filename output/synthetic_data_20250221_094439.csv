@@ -1,0 +1,1 @@
+from src.quality.checker import QualityChecker

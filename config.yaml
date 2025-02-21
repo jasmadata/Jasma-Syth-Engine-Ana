@@ -1,0 +1,129 @@
+
+generators:
+  # Personal Information
+  Age:
+    type: numerical
+    params:
+      distribution: normal
+      mean: 30
+      std_dev: 10
+      min_value: 18
+      max_value: 65
+    description: "Age of individuals"
+
+  Height:
+    type: numerical
+    params:
+      distribution: normal
+      mean: 170
+      std_dev: 15
+      min_value: 140
+      max_value: 200
+    description: "Height in centimeters"
+
+  Weight:
+    type: numerical
+    params:
+      distribution: lognormal
+      mean: 70
+      std_dev: 15
+      min_value: 40
+      max_value: 150
+    description: "Weight in kilograms"
+
+  # Financial Data
+  Income:
+    type: numerical
+    params:
+      distribution: lognormal
+      mean: 50000
+      std_dev: 20000
+      min_value: 20000
+      max_value: 200000
+    description: "Annual income in USD"
+
+  CreditScore:
+    type: numerical
+    params:
+      distribution: normal
+      mean: 700
+      std_dev: 50
+      min_value: 300
+      max_value: 850
+    description: "Credit score"
+
+  # Categorical Data
+  Gender:
+    type: categorical
+    params:
+      categories: ["Male", "Female", "Non-binary", "Other"]
+      probabilities: [0.48, 0.48, 0.03, 0.01]
+    description: "Gender identity"
+
+  Education:
+    type: categorical
+    params:
+      categories: ["High School", "Bachelor's", "Master's", "PhD", "Other"]
+      probabilities: [0.3, 0.4, 0.2, 0.05, 0.05]
+    description: "Education level"
+
+  MaritalStatus:
+    type: categorical
+    params:
+      categories: ["Single", "Married", "Divorced", "Widowed"]
+      probabilities: [0.45, 0.40, 0.10, 0.05]
+    description: "Marital status"
+
+  Occupation:
+    type: categorical
+    params:
+      categories: [
+        "Engineer", "Teacher", "Doctor", "Artist",
+        "Business", "Student", "Retired", "Other"
+      ]
+      probabilities: [0.2, 0.15, 0.1, 0.1, 0.2, 0.1, 0.05, 0.1]
+    description: "Occupation category"
+
+  # Time Series Data
+  SignUpDate:
+    type: timeseries
+    params:
+      start_date: "2022-01-01"
+      end_date: "2024-01-01"
+      frequency: "1D"
+      distribution: "uniform"
+    description: "User registration date"
+
+  LastLoginTime:
+    type: timeseries
+    params:
+      start_date: "2024-01-01"
+      end_date: "2024-02-20"
+      frequency: "1H"
+      distribution: "normal"
+      peak_hours: [9, 14, 20]  # Peak activity hours
+    description: "Last login timestamp"
+
+  # Location Data
+  Location:
+    type: categorical
+    params:
+      categories: ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix",
+                  "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose"]
+      probabilities: [0.15, 0.12, 0.1, 0.1, 0.1, 0.1, 0.08, 0.08, 0.09, 0.08]
+    description: "City of residence"
+
+  # Boolean Data
+  IsSubscribed:
+    type: categorical
+    params:
+      categories: [true, false]
+      probabilities: [0.7, 0.3]
+    description: "Subscription status"
+
+  HasHealthInsurance:
+    type: categorical
+    params:
+      categories: [true, false]
+      probabilities: [0.85, 0.15]
+    description: "Health insurance status" 
